@@ -22,10 +22,42 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container()
+        Me.DroneVendingMachine1 = New DroneDad.DroneVendingMachine()
+        Me.ShoppingCart = New System.Windows.Forms.Label()
+        Me.SuspendLayout()
+        '
+        'DroneVendingMachine1
+        '
+        Me.DroneVendingMachine1.Location = New System.Drawing.Point(21, 12)
+        Me.DroneVendingMachine1.Name = "DroneVendingMachine"
+        Me.DroneVendingMachine1.Name = "DroneVendingMachine1"
+        Me.DroneVendingMachine1.price = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.DroneVendingMachine1.Size = New System.Drawing.Size(168, 148)
+        Me.DroneVendingMachine1.TabIndex = 0
+        '
+        'ShoppingCart
+        '
+        Me.ShoppingCart.AutoSize = True
+        Me.ShoppingCart.Location = New System.Drawing.Point(697, 358)
+        Me.ShoppingCart.Name = "ShoppingCart"
+        Me.ShoppingCart.Size = New System.Drawing.Size(53, 20)
+        Me.ShoppingCart.TabIndex = 1
+        Me.ShoppingCart.Text = "Label1"
+        '
+        'Form1
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.ShoppingCart)
+        Me.Controls.Add(Me.DroneVendingMachine1)
+        Me.Name = "Form1"
         Me.Text = "Form1"
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
 
+    Friend WithEvents DroneVendingMachine1 As DroneVendingMachine
+    Friend WithEvents ShoppingCart As Label
 End Class
